@@ -1,0 +1,108 @@
+html{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding-left: 100px;
+}
+
+body>main{
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    height: 100%;
+}
+
+body>header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-grey1);
+    width: 100%;
+    height: 76px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+body>header>h1{
+    margin-left: 20px;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-white-fixed);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body>header>button{
+    margin-right: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 200;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white-fixed);
+    cursor: pointer;
+}
+
+body>main>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    width: 85%;
+    gap: 22px;
+}
+
+body>main>form>input:nth-child(1){
+    height: 42px;
+    width: 100%;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: 1.8px solid var(--color-grey4);
+    border-radius: 4px;
+}
+
+body>main>form>input:nth-child(2){
+    height: 100px;
+    width: 100%;
+    padding: 5px 20px 45px 20px;
+    box-sizing: border-box;
+    border: 1.8px solid var(--color-grey4);
+    border-radius: 4px;
+}
+
+body>main>form>button{
+    width: 55px;
+    height: 28px;
+    border: transparent;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    background-color: var(--color-brand1);
+    color: var(--color-white-fixed);
+}
+
+body>main>form>button:disabled{
+    background-color: var(--color-grey4);
+    color: var(--color-grey3);
+}
+
+body>main>div{
+    margin-top: 40px;
+}
+
+@media(min-width: 768px){
+    body>header>h1{
+        margin-left: 100px;
+        font-family: 'Inter', sans-serif;
+        color: var(--color-white-fixed);
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/globalStyle.css">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/domUserAccount.css">
+    <script defer src="./src/scripts/users.js"></script>
+    <script defer src="./src/scripts/index.js"></script>
+    <script defer src="./src/scripts/posts.js"></script>
+    <script defer src="./src/scripts/sugestUsers.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>TechPosters</h1>
+        <button>Sair</button>
+    </header>
+    <main>
+        <ul class="userAccount">
+        </ul>
+
+        <form id="form">
+            <input type="text" placeholder="Digitar título do post">
+            <input type="text" placeholder="Digitar descrição do post">
+            <button  class="buttonPostar" type="submit" disabled="disabled">Postar</button>
+        </form>
+
+        <div id="aside">
+            <h1>Sugestões para você seguir</h1>
+            <ul class="sugestionsToFollow"></ul>
+        </div>
+    </main>
+</body>
+
+</html>
