@@ -9,7 +9,7 @@ body{
     height: 100vh;
     padding-left: 100px;
 }
-
+ 
 body>main{
     position: absolute;
     top: 130px;
@@ -24,9 +24,8 @@ body>header{
     background-color: var(--color-grey1);
     width: 100%;
     height: 76px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
+    z-index: 1;
 }
 
 body>header>h1{
@@ -63,7 +62,7 @@ body>main>form>input:nth-child(1){
     width: 100%;
     padding: 5px 20px;
     box-sizing: border-box;
-    border: 1.8px solid var(--color-grey4);
+    border: 2px solid var(--color-grey4);
     border-radius: 4px;
 }
 
@@ -72,7 +71,7 @@ body>main>form>input:nth-child(2){
     width: 100%;
     padding: 5px 20px 45px 20px;
     box-sizing: border-box;
-    border: 1.8px solid var(--color-grey4);
+    border: 2px solid var(--color-grey4);
     border-radius: 4px;
 }
 
@@ -86,23 +85,233 @@ body>main>form>button{
     align-self: flex-end;
     background-color: var(--color-brand1);
     color: var(--color-white-fixed);
+    cursor: pointer;
 }
 
 body>main>form>button:disabled{
     background-color: var(--color-grey4);
     color: var(--color-grey3);
+    cursor: auto;
 }
 
 body>main>div{
     margin-top: 40px;
 }
 
+body>main>div>h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+body>main>div>ul{
+    display: flex;
+    overflow-x: auto;
+    margin-top: 60px;
+    gap: 5px;
+    width: 85%;
+}
+
+body>main>div>ul>li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 110px;
+    position: relative;
+    flex-direction: column;
+    min-width: 220px;
+}
+
+body>main>div>ul>li>img{
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+}
+
+body>main>div>ul>li>h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px auto 10px 60px;
+
+}
+
+body>main>div>ul>li>p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px auto auto 61px;
+
+}
+
+body>main>div>ul>li>button{
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 68px;
+    height: 24px;
+    border: solid 1px var(--color-grey1);
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--color-grey1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body>main>div>ul>li>button:active{
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-brand1);
+    color: var(--color-white-fixed);
+}
+
+body>main>section>h1{
+    margin-top: 40px;  
+    color: var(--color-grey1);
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 52px;
+}
+
+/* body>main>section>ul{
+    margin-top: ;  
+} */
+
+body>main>section>ul>li{
+    display: flex;
+    flex-direction: column; 
+    position: relative;  
+}
+
+body>main>section>ul>li>img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+body>main>section>ul>li>h1{
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 24px;
+    margin-left: 60px;
+}
+
+body>main>section>ul>li>p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    line-height: 16px;
+    margin-left: 60px;
+}
+body>main>section>ul>li>h2{
+    margin-top: 40px;  
+    color: var(--color-grey1);
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+    width: 90%;
+}
+body>main>section>ul>li>h6{
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    line-height: 28px;
+    width: 90%;
+}
+
+body>main>section>ul>li>button{
+    margin-top: 20px;
+    align-items: flex-start;
+    width: 90px;
+    height: 38px;
+    margin-bottom: 30px;
+    background-color: var(--color-grey1);
+    color: var(--color-white-fixed);
+    border: none;
+    border-radius: 4px;    
+}
+
+
 @media(min-width: 768px){
+
+    body>header>button{
+        margin-right: 80px;
+    }
+
     body>header>h1{
         margin-left: 100px;
         font-family: 'Inter', sans-serif;
         color: var(--color-white-fixed);
         font-size: 20px;
         font-weight: 600;
+    }
+
+    body>main>form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 35px;
+        margin-left: 80px;
+        width: 40%;
+        gap: 22px;
+    }
+
+    body>main>div{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 0;
+        width: 40%;
+    }
+
+    body>main>div>h1{
+        margin-top: 0;
+    }
+
+    body>main>div>ul{
+        display: flex;
+        overflow-x: auto;
+        margin-top: 60px;
+        gap: 5px;
+        width: 85%;
+    }
+
+    body>main>div>ul{
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    body>main>section>ul>li>h2{
+        margin-top: 40px;  
+        color: var(--color-grey1);
+        font-weight: 700;
+        font-size: 28px;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    body>main>section>ul>li>h6{
+        font-weight: 400;
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+        line-height: 28px;
+        width: 50%;
+    }
+
+    body>main>section{
+        margin-top: 40px;  
+        color: var(--color-grey1);
+        font-weight: 700;
+        font-size: 28px;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 52px;
+        margin-left: 80px;
     }
 }

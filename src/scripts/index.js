@@ -10,10 +10,6 @@ function renderUserAccount(array) {
             let nameUserAccount = document.createElement('h1')
             let officeUserAccount = document.createElement('p')
 
-            // imgUserAccount.classList.add('imgUserAccount')
-            // nameUserAccount.classList.add('nameUserAccount')
-            // officeUserAccount.classList.add('officeUserAccount')
-
             imgUserAccount.src = array[i].img
             nameUserAccount.innerText = array[i].user
             officeUserAccount.innerText = array[i].stack
@@ -30,7 +26,7 @@ renderUserAccount(users)
 function activeButton(parameter) {
     let on = true
 
-    parameter.forEach((input)=> {
+    parameter.forEach((input) => {
 
         if (input.value === "") {
             on = false
@@ -44,9 +40,9 @@ function activeButton(parameter) {
 let inputs = document.querySelectorAll('input')
 let button = document.querySelector('.buttonPostar')
 
-inputs.forEach((input)=> {
+inputs.forEach((input) => {
 
-    input.addEventListener("keyup", ()=> {
+    input.addEventListener("keyup", () => {
         if (activeButton(inputs)) {
             button.disabled = false;
         } else {
@@ -81,3 +77,25 @@ function renderSugestionsToFollow(array) {
     }
 }
 renderSugestionsToFollow(users)
+
+
+// function renderPosts(array) {
+//     let posts = document.querySelector('.posts')
+//     posts.innerHTML = ''
+
+//     for (let i = 0; i < array.length; i++) {
+//         let liUserAccount = document.createElement('li')
+//         let imgUserAccount = document.createElement('img')
+//         let nameUserAccount = document.createElement('h1')
+//         let officeUserAccount = document.createElement('p')
+
+//         imgUserAccount.src = array[i].img
+//         nameUserAccount.innerText = array[i].user
+//         officeUserAccount.innerText = array[i].stack
+
+//         posts.append(liUserAccount)
+//         liUserAccount.append(imgUserAccount, nameUserAccount, officeUserAccount)
+
+//     }
+// }
+// renderPosts(posts)

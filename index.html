@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="./src/styles/globalStyle.css">
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/domUserAccount.css">
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <script defer src="./src/scripts/modal.js"></script>
     <script defer src="./src/scripts/users.js"></script>
-    <script defer src="./src/scripts/index.js"></script>
     <script defer src="./src/scripts/posts.js"></script>
+    <script defer src="./src/scripts/index.js"></script>
     <script defer src="./src/scripts/sugestUsers.js"></script>
     <title>Document</title>
 </head>
 
-<body>
+<body> 
     <header>
         <h1>TechPosters</h1>
         <button>Sair</button>
@@ -36,6 +38,35 @@
             <h1>Sugestões para você seguir</h1>
             <ul class="sugestionsToFollow"></ul>
         </div>
+        <section>
+            <h1>Posts</h1>
+            <ul class="posts">
+                <li>
+                    <img src="./src/assets/img/user2.svg" alt="">
+                    <h1>Samuel Persuhn</h1>
+                    <p>Front end Engineer</p>
+                    <h2>Empresa de Tecnologia da Informação abre vagas para programa de estágio</h2>
+                    <h6>A Framework Digital, empresa mineira especializada em Tecnologia da Informação, irá iniciar o seu sexto programa de estágio, com o prazo de inscrições entre os dias 08 e 28 de agosto. O programa é conhecido como Framework Padawans, com inspiração nos filmes Star Wars. Nas histórias, os iniciantes fazem treinamentos para se tornar cavaleiros Jedi, que compõem o lado bom da força.</h6>
+                    <button class="openModal">Abrir Post</button>
+                </li>
+            </ul>
+        </section>
+
+        <div class="divBackground">
+            <form class="modal">
+                <div class="head">
+                    <img src="./src/assets/img/user2.svg" alt="">
+                    <h1>Samuel Persuhn</h1>
+                    <p>Front end Engineer</p>
+                    <button class="close">X</button>
+                </div>
+                <div class="modalContent">
+                    <h1>Empresa de Tecnologia da Informação abre vagas para programa de estágio</h1>
+                    <p>A Framework Digital, empresa mineira especializada em Tecnologia da Informação, irá iniciar o seu sexto programa de estágio, com o prazo de inscrições entre os dias 08 e 28 de agosto. O programa é conhecido como Framework Padawans, com inspiração nos filmes Star Wars. Nas histórias, os iniciantes fazem treinamentos para se tornar cavaleiros Jedi, que compõem o lado bom da força.</p>
+                </div>
+            </form>
+        </div>
+
     </main>
 </body>
 
